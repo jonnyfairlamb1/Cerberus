@@ -1,0 +1,12 @@
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.csproj.AssemblyReference.cache
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.AssemblyInfoInputs.cache
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.AssemblyInfo.cs
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.csproj.CoreCompileInputs.cache
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\bin\Debug\net5.0\CommonData.deps.json
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\bin\Debug\net5.0\CommonData.dll
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\bin\Debug\net5.0\CommonData.pdb
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.dll
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\refint\CommonData.dll
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\CommonData.pdb
+C:\Users\Jonny\Documents\UnityProjects\ProjectCerberus\_Libs\CommonData\obj\Debug\net5.0\ref\CommonData.dll

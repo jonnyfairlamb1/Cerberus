@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <targets>
+    <target xsi:type="File" name="logfile" fileName="C:\Logs\tracing\DatabaseAccessService\trace.log"
+            layout="${longdate} ${level}: ${message} | ${all-event-properties}" />
+    <target xsi:type="File" name="errorfile" fileName="C:\Logs\tracing\DatabaseAccessService\error.log"
+            layout="${longdate} ${level}: ${message} | ${all-event-properties} ${exception:format=tostring}" />
+  </targets>
+
+  <rules>
+    <!--Skip non-critical Microsoft logs and so log only own logs-->
+    <logger name="Microsoft.*" maxLevel="Debug" final="true" />
+
+    <logger name="*" maxLevel="Debug" writeTo="logfile" />
+    <logger name="*" maxLevel="Warn" writeTo="errorfile" />
+  </rules>
+</nlog>

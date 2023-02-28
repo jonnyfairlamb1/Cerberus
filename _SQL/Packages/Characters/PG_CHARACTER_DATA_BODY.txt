@@ -1,0 +1,70 @@
+create or replace PACKAGE BODY PG_CHARACTER_DATA AS
+
+PROCEDURE SetupNewAccountSkins(SteamId IN VARCHAR2) is
+CURSOR CharacterSkinValuesCur IS SELECT skin_id from metadata_character_skins where baseline = 'Y';
+SkinId number;
+TargetSkinTable varchar2(100);
+SQLStatement varchar2(1000);
+BEGIN
+OPEN CharacterSkinValuesCur;
+LOOP
+    FETCH CharacterSkinValuesCur INTO skinid;
+    EXIT WHEN CharacterSkinValuesCur%NOTFOUND;
+    INSERT INTO player_skins VALUES(PLAYER_SKIN_ID.nextval, SteamId, SkinId);
+END LOOP;
+END SetupNewAccountSkins;
+
+PROCEDURE GetAllCharacterSkins(results out sys_refcursor) IS
+BEGIN
+OPEN results FOR
+SELECT 
+skin_id,
+character_name,
+skin_name,
+cost
+FROM metadata_character_skins;
+END GetAllCharacterSkins;
+
+PROCEDURE GetCharacterData(results out sys_refcursor) IS
+BEGIN
+OPEN results FOR
+SELECT
+CHARACTER_ID,
+CHARACTER_NAME,
+HEALTH,
+RUN_SPEED,
+FOOTSTEP_VOLUME
+FROM METADATA_CHARACTER_DATA;
+END GetCharacterData;
+
+
+PROCEDURE GetAllCharacterSkins(characterId in number, results out sys_refcursor) IS
+BEGIN
+OPEN results FOR
+SELECT
+SKIN_ID,
+CHARACTER_NAME,
+SKIN_NAME,
+COST
+FROM metadata_character_skins WHERE characterId = CHARACTER_ID;
+END GetAllCharacterSkins;
+
+PROCEDURE GetCharacterAbilityData(characterId in number,results out sys_refcursor) IS
+BEGIN
+OPEN results FOR
+SELECT 
+ability_id,
+character_id,
+ability_name,
+healing,
+damage,
+cooldown,
+ability_bind,
+ability_type,
+ultimate_charge_modifier
+FROM metadata_character_abilities WHERE characterId = character_id;
+END GetCharacterAbilityData;
+
+
+
+END PG_CHARACTER_DATA;

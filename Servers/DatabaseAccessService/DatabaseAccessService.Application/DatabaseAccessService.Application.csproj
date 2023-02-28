@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccessService.Domain\DatabaseAccessService.Domain.csproj" />
+    <ProjectReference Include="..\DatabaseAccessService.Infrastructure\DatabaseAccessService.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\BaseWeapons\Validators\" />
+    <Folder Include="Features\CharacterData\Validators\" />
+    <Folder Include="Features\ErrorMessages\Validators\" />
+    <Folder Include="Features\GetPlayerData\Validators\" />
+    <Folder Include="Features\JoinRandomGame\Validators\" />
+    <Folder Include="Features\RegisterServer\Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonData">
+      <HintPath>..\..\..\_Libs\CommonData\bin\Debug\net5.0\CommonData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

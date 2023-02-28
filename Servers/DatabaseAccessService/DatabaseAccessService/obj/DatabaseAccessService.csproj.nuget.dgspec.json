@@ -1,0 +1,358 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService\\DatabaseAccessService.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj",
+        "projectName": "DatabaseAccessService.Application",
+        "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj",
+        "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj": {
+                "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj"
+              },
+              "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\DatabaseAccessService.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\DatabaseAccessService.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
+        "projectName": "DatabaseAccessService.Domain",
+        "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
+        "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "morelinq": {
+              "target": "Package",
+              "version": "[3.3.2, )"
+            },
+            "prometheus-net": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\DatabaseAccessService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\DatabaseAccessService.Infrastructure.csproj",
+        "projectName": "DatabaseAccessService.Infrastructure",
+        "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\DatabaseAccessService.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj": {
+                "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[3.21.90, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService\\DatabaseAccessService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService\\DatabaseAccessService.csproj",
+        "projectName": "DatabaseAccessService",
+        "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService\\DatabaseAccessService.csproj",
+        "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Jonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj": {
+                "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Hosting.WindowsServices": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "prometheus-net": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

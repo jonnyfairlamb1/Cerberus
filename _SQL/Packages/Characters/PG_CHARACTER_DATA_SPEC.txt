@@ -1,0 +1,7 @@
+create or replace PACKAGE PG_CHARACTER_DATA AS 
+
+PROCEDURE SetupNewAccountSkins(SteamId IN VARCHAR2);
+PROCEDURE GetCharacterData(results out sys_refcursor);
+PROCEDURE GetAllCharacterSkins(characterId in number, results out sys_refcursor);
+PROCEDURE GetCharacterAbilityData(characterId in number,results out sys_refcursor);
+END PG_PG_CHARACTER_DATA;

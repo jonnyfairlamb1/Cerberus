@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Factory\**" />
+    <Compile Remove="Metrics\**" />
+    <EmbeddedResource Remove="Factory\**" />
+    <EmbeddedResource Remove="Metrics\**" />
+    <None Remove="Factory\**" />
+    <None Remove="Metrics\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.90" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccessService.Domain\DatabaseAccessService.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonData">
+      <HintPath>..\..\..\_Libs\CommonData\bin\Debug\net5.0\CommonData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
