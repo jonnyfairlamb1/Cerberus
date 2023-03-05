@@ -1,4 +1,5 @@
 ﻿using CerberusLoginServer.Networking;
+using CommonData.DTOs;
 using CommonData.PlayerSendData;
 using CommonData.ServerData;
 using NovaCoreNetworking.Utils;
@@ -19,7 +20,11 @@ namespace LoginServer.Proxy {
                     PropertyNameCaseInsensitive = true
                 };
 
-                _baseWeaponsData = JsonSerializer.Deserialize<List<BaseWeapon>>(baseWeaponString, options);
+                var weaponData = JsonSerializer.Deserialize<BaseWeaponsDTO>(baseWeaponString, options);
+
+                if (weaponData != null)
+                    _baseWeaponsData = weaponData.BaseWeapons;
+                else throw new InvalidDataException("Error occured while getting base weapon data");
                 NovaCoreLogger.Log(LogType.Info, "Got update base weapon data");
             }
 

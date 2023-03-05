@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QeEBeEIlQb8NG64S3+45W18baADywVp+6x9v3f5jR+X1OMXlrB7E+zd4wvH+w2ZrO/swDzcAxDVpUAUiPLh0/g==",
+  "dgSpecHash": "wRtK3z7wOY2TjMulmLB9c3/CY38B83z3G/XPfKJiYy0DcQdUR6apAdbaCnfk9di1w5wPH8OBtUqkMPO85O4tUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj",
+  "projectFilePath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Application\\DatabaseAccessService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonny\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Jonny\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

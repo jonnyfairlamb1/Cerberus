@@ -689,11 +689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
       "projectName": "DatabaseAccessService.Domain",
-      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
+      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\DatabaseAccessService.Domain.csproj",
       "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\DatabaseAccessService\\DatabaseAccessService.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -42,5 +42,11 @@ namespace GameServer.Networking {
             var lobbyManager = ServerData.GetLobbyOfPlayer(steamId);
             lobbyManager.PlayerChoseCharacter(steamId, characterId);
         }
+
+        [MessageHandler((ushort)ClientPackets.C_PlayerChoseLoadout)]
+        private static void Packet_PlayerChoseLoadout(ushort fromClientId, Message message) {
+            //TODO: implement player chose loadout
+            throw new NotImplementedException();
+        }
     }
 }

@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Misc\\CerberusAdminTool\\CerberusAdminTool.csproj",
+      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Misc\\CerberusAdminTool\\CerberusAdminTool.csproj",
       "projectName": "CerberusAdminTool",
-      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Misc\\CerberusAdminTool\\CerberusAdminTool.csproj",
+      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Misc\\CerberusAdminTool\\CerberusAdminTool.csproj",
       "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Misc\\CerberusAdminTool\\obj\\",
+      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Misc\\CerberusAdminTool\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

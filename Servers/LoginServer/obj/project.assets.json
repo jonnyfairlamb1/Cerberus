@@ -1152,11 +1152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\LoginServer\\LoginServer.csproj",
+      "projectUniqueName": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\LoginServer\\LoginServer.csproj",
       "projectName": "LoginServer",
-      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\LoginServer\\LoginServer.csproj",
+      "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\LoginServer\\LoginServer.csproj",
       "packagesPath": "C:\\Users\\Jonny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Servers\\LoginServer\\obj\\",
+      "outputPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Servers\\LoginServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1180,11 +1180,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Libraries\\NovaCoreNetworking\\NovaCoreNetworking\\NovaCoreNetworking.csproj": {
-              "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\Libraries\\NovaCoreNetworking\\NovaCoreNetworking\\NovaCoreNetworking.csproj"
+            "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Libraries\\NovaCoreNetworking\\NovaCoreNetworking\\NovaCoreNetworking.csproj": {
+              "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\Libraries\\NovaCoreNetworking\\NovaCoreNetworking\\NovaCoreNetworking.csproj"
             },
-            "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\_Libs\\CommonData\\CommonData.csproj": {
-              "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\ProjectCerberus\\_Libs\\CommonData\\CommonData.csproj"
+            "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\_Libs\\CommonData\\CommonData.csproj": {
+              "projectPath": "C:\\Users\\Jonny\\Documents\\UnityProjects\\Cerberus\\_Libs\\CommonData\\CommonData.csproj"
             }
           }
         }

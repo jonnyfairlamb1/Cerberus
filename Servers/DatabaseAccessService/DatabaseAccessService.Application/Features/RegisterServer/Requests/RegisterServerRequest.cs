@@ -1,4 +1,4 @@
-﻿using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 

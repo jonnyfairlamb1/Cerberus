@@ -22,7 +22,7 @@ namespace CommonData.ServerData {
 
         public List<GamePlayerData> PlayersGameData { get; set; } = new();
 
-        public Dictionary<int, DBPlayer[]> LobbyTeams { get; set; }
+        public Dictionary<int, DBPlayer[]> LobbyTeams { get; set; } = new();
 
         public Lobby(int lobbyID, GameMaps gameMap, GameMode gamemode, string serverIp, int serverPort) {
             LobbyID = lobbyID;

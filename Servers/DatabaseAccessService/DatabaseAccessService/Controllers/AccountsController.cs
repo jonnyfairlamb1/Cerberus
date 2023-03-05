@@ -1,4 +1,4 @@
-﻿using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
 using DatabaseAccessService.Application.Features.PlayerLogin.Requests;
 using DatabaseAccessService.Application.Features.PlayerLogout.Requests;
 using MediatR;

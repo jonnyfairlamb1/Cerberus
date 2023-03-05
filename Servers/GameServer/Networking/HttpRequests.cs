@@ -1,4 +1,5 @@
-﻿using CommonData.PlayerSendData;
+﻿using CommonData.DTOs;
+using CommonData.PlayerSendData;
 using CommonData.ServerData;
 using System.Text.Json;
 
@@ -11,18 +12,17 @@ public static class HttpRequests {
     public static int databaseServicePortNumber = 5000;
 
     public static async Task<Dictionary<int, ErrorMessage>> GetErrorMessages() {
-        Dictionary<int, ErrorMessage> errorMessages = new();
         var options = new JsonSerializerOptions {
             PropertyNameCaseInsensitive = true
         };
 
-        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/GetErrorMessages";
+        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/api/server/GetErrorMessages";
         Console.WriteLine(request);
 
         var streamTask = client.GetStreamAsync(request);
-        errorMessages = await JsonSerializer.DeserializeAsync<Dictionary<int, ErrorMessage>>(await streamTask, options);
+        var errorMessages = await JsonSerializer.DeserializeAsync<ErrorMessagesDTO>(await streamTask, options);
 
-        return errorMessages;
+        return errorMessages.ErrorMessages;
     }
 
     public static async Task<GameServerData> RegisterServerAsync(string ipAddress, int port, int numberOfLobbies) {
@@ -30,14 +30,17 @@ public static class HttpRequests {
             PropertyNameCaseInsensitive = true
         };
 
-        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/RegisterServer?IPAddress="
+        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/api/server/RegisterServer?IPAddress="
             + ipAddress + "&Port=" + port + "&NumberOfLobbies=" + numberOfLobbies;
 
         Console.WriteLine(request);
 
         var streamTask = client.GetStreamAsync(request);
-        var gameServer = await JsonSerializer.DeserializeAsync<GameServerData>(await streamTask, options);
-        return gameServer!;
+        var gameServerDto = await JsonSerializer.DeserializeAsync<GameServerDataDTO>(await streamTask, options);
+
+        GameServerData gameServerData = new(gameServerDto);
+
+        return gameServerData;
     }
 
     public static async Task<bool> CloseGameServer(int serverId) {
@@ -58,12 +61,12 @@ public static class HttpRequests {
             PropertyNameCaseInsensitive = true
         };
 
-        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/GetPlayerData?SteamId=" + steamId;
+        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/api/server/GetPlayerData?SteamId=" + steamId;
         Console.WriteLine(request);
         var streamTask = client.GetStreamAsync(request);
-        var playerData = await JsonSerializer.DeserializeAsync<DBPlayer>(await streamTask, options);
+        var playerData = await JsonSerializer.DeserializeAsync<PlayerDataDTO>(await streamTask, options);
 
-        return playerData!;
+        return playerData.Player;
     }
 
     public static async Task<Dictionary<int, BaseCharacter>> GetCharacterData() {
@@ -71,10 +74,10 @@ public static class HttpRequests {
             PropertyNameCaseInsensitive = true
         };
 
-        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/CharacterData?";
+        string request = $"http://{databaseServiceIpAddress}:{databaseServicePortNumber}/api/server/GetCharacterData";
         Console.WriteLine(request);
         var streamTask = client.GetStreamAsync(request);
-        var characterData = await JsonSerializer.DeserializeAsync<Dictionary<int, BaseCharacter>>(await streamTask, options);
-        return characterData;
+        var characterData = await JsonSerializer.DeserializeAsync<CharacterDataDTO>(await streamTask, options);
+        return characterData.characterData;
     }
 }

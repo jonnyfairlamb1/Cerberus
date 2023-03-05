@@ -1,4 +1,4 @@
-﻿using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
 using MediatR;
 
 namespace DatabaseAccessService.Application.Features.ErrorMessages.Requests {

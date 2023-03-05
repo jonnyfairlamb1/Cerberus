@@ -1,5 +1,5 @@
-﻿using CommonData.ServerData;
-using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
+using CommonData.ServerData;
 using DatabaseAccessService.Application.Features.JoinRandomGame.Requests;
 using DatabaseAccessService.Domain.Services.Interfaces;
 using MediatR;

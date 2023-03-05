@@ -1,6 +1,6 @@
 ﻿using CommonData.ServerData;
 
-namespace DatabaseAccessService.Application.DTOs {
+namespace CommonData.DTOs {
     public record PlayerDataDTO {
         public DBPlayer Player { get; set; }
     }

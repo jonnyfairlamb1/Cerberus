@@ -19,7 +19,8 @@
         C_Weapon_Data,
         C_JoinRandomGame,
         C_LobbyId,
-        C_PlayerChoseCharacter
+        C_PlayerChoseCharacter,
+        C_PlayerChoseLoadout,
     }
 
     enum GameServerPackets {

@@ -1,6 +1,7 @@
 ﻿using CommonData.PlayerSendData;
+using System.Collections.Generic;
 
-namespace DatabaseAccessService.Application.DTOs {
+namespace CommonData.DTOs {
     public record BaseWeaponsDTO {
         public List<BaseWeapon> BaseWeapons { get; set; } = new();
     }

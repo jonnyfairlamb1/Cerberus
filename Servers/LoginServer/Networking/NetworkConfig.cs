@@ -30,8 +30,15 @@ public static class NetworkConfig {
         await DataProxy.GetBaseWeapons();
         await DataProxy.GetCharacterData();
         _acceptingConnections = true;
+        NovaCoreLogger.Log(LogType.Info, "All data recieved. Waiting on client connection.");
     }
 
+    /// <summary>
+    /// Checks to see if the server has started up fully before accepting any connections. This will
+    /// be useful if the startup procedure takes a long time
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private static void Server_ClientConnected(object? sender, ServerConnectedEventArgs e) {
         if (!_acceptingConnections) {
             Message message = Message.Create(MessageSendMode.Reliable, (ushort)Packets.LoginServerPackets.LS_RejectedConnection_ServerNotReady);

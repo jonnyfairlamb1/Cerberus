@@ -1,4 +1,4 @@
-﻿namespace DatabaseAccessService.Application.DTOs {
+﻿namespace CommonData.DTOs {
     public record JoinRandomGameDTO {
         public int LobbyID { get; set; }
         public string ServerIp { get; set; }

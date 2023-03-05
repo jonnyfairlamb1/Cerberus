@@ -1,4 +1,4 @@
-﻿using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
 using DatabaseAccessService.Application.Features.BaseWeapons.Requests;
 using DatabaseAccessService.Application.Features.CharacterData.Requests;
 using DatabaseAccessService.Application.Features.ErrorMessages.Requests;

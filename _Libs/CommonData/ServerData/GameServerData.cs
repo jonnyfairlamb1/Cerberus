@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CommonData.DTOs;
+using System.Collections.Generic;
 
 namespace CommonData.ServerData {
 
@@ -7,18 +8,27 @@ namespace CommonData.ServerData {
         public int Port { get; set; }
         public int GameServerId { get; set; }
 
-        public Dictionary<int, Lobby> Lobbies { get; set; }
+        public Dictionary<int, Lobby> Lobbies { get; set; } = new();
 
-        public GameServerData(string ipAddress, int port, int gameServerId, int amountOfLobbies, List<GameMaps> gameMap, List<GameMode> gameModes) {
+        public GameServerData(GameServerDataDTO gameServerDataDTO) {
             Lobbies = new();
 
+            IpAddress = gameServerDataDTO.IpAddress;
+            Port = gameServerDataDTO.Port;
+            GameServerId = gameServerDataDTO.GameServerId;
+
+            Lobbies = gameServerDataDTO.Lobbies;
+        }
+
+        public GameServerData(string ipAddress, int port, int gameServerId, int amountOfLobbies, List<GameMaps> maps, List<GameMode> gameModes) {
             IpAddress = ipAddress;
             Port = port;
             GameServerId = gameServerId;
 
             for (int i = 0; i < amountOfLobbies; i++) {
-                Lobbies.Add(i, new Lobby(i, gameMap[i], gameModes[i], ipAddress, port));
+                Lobbies.Add(i, new(i, maps[i], gameModes[i], ipAddress, port));
             }
+            //Lobbies = lobbies;
         }
 
         public GameServerData() {

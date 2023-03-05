@@ -1,5 +1,5 @@
-﻿using CommonData.ServerData;
-using DatabaseAccessService.Application.DTOs;
+﻿using CommonData.DTOs;
+using CommonData.ServerData;
 using DatabaseAccessService.Application.Features.PlayerLogin.Requests;
 using DatabaseAccessService.Domain.Services.Interfaces;
 using MediatR;
