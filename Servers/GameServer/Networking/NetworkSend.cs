@@ -1,7 +1,7 @@
 ﻿using CerberusGameServer.Networking;
 using CommonData.GameServer;
 using CommonData.ServerData;
-using NovaCoreNetworking;
+using NovaCore;
 using Packets;
 
 namespace GameServer.Networking {

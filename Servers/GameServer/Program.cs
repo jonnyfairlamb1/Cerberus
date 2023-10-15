@@ -1,6 +1,6 @@
 ﻿using CerberusGameServer.Networking;
 using GameServer.General;
-using NovaCoreNetworking.Utils;
+using NovaCore.Utils;
 
 namespace CerberusGameServer {
 

@@ -1,6 +1,6 @@
 ﻿using CommonData.DTOs;
-using DatabaseAccessService.Application.Features.PlayerLogin.Requests;
-using DatabaseAccessService.Application.Features.PlayerLogout.Requests;
+using DatabaseAccessService.Features.PlayerLogin.Requests;
+using DatabaseAccessService.Features.PlayerLogout.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

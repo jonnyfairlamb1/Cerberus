@@ -1,5 +1,5 @@
-using DatabaseAccessService.Application.Extensions;
 using DatabaseAccessService.Domain.Extensions;
+using DatabaseAccessService.Extensions;
 using DatabaseAccessService.Infrastructure.Extensions;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using Microsoft.OpenApi.Models;

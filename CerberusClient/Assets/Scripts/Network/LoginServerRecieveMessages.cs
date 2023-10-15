@@ -1,5 +1,5 @@
 ﻿using CerberusClient.Network.Data;
-using NovaCoreNetworking;
+using NovaCore;
 using Packets;
 using UnityEngine;
 

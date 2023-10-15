@@ -1,4 +1,4 @@
-using NovaCoreNetworking.Utils;
+using NovaCore.Utils;
 using Steamworks;
 using TMPro;
 using UnityEngine;
@@ -128,7 +128,7 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void JoinGameButton() {
-        NovaCoreLogger.Log(NovaCoreNetworking.Utils.LogType.Debug, "Sending join game request");
+        NovaCoreLogger.Log(NovaCore.Utils.LogType.Debug, "Sending join game request");
         NetworkSend.SendJoinGameRequest();
     }
 

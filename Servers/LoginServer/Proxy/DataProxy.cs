@@ -2,7 +2,7 @@
 using CommonData.DTOs;
 using CommonData.PlayerSendData;
 using CommonData.ServerData;
-using NovaCoreNetworking.Utils;
+using NovaCore.Utils;
 using System.Text.Json;
 
 namespace LoginServer.Proxy {

@@ -21,6 +21,6 @@ public class WeaponIdentification : MonoBehaviour {
     private void Start() {
         totalMagazines = weapon.totalMagazines;
         magazineSize = weapon.magazineSize;
-        GetComponentInChildren<Animator>().keepAnimatorControllerStateOnDisable = true;
+        GetComponentInChildren<Animator>().keepAnimatorStateOnDisable = true;
     }
 }

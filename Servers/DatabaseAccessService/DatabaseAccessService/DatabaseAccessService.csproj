@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -11,24 +11,35 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.10" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="NLog" Version="5.1.2" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.2" />
-    <PackageReference Include="prometheus-net" Version="8.0.0" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="8.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DatabaseAccessService.Application\DatabaseAccessService.Application.csproj" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog" Version="5.2.4" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.4" />
+    <PackageReference Include="prometheus-net" Version="8.0.1" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CommonData">
       <HintPath>..\..\..\_Libs\CommonData\bin\Debug\net5.0\CommonData.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\BaseWeapons\Validators\" />
+    <Folder Include="Features\CharacterData\Validators\" />
+    <Folder Include="Features\ErrorMessages\Validators\" />
+    <Folder Include="Features\GetPlayerData\Validators\" />
+    <Folder Include="Features\JoinRandomGame\Validators\" />
+    <Folder Include="Features\RegisterServer\Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccessService.Domain\DatabaseAccessService.Domain.csproj" />
+    <ProjectReference Include="..\DatabaseAccessService.Infrastructure\DatabaseAccessService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

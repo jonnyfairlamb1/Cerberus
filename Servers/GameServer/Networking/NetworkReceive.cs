@@ -2,7 +2,7 @@
 using CommonData.GameServer;
 using CommonData.ServerData;
 using GameServer.General;
-using NovaCoreNetworking;
+using NovaCore;
 using Packets;
 
 namespace GameServer.Networking {

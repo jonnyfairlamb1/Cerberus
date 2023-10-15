@@ -1,5 +1,5 @@
 ﻿using Assets.Scripts.Entities;
-using NovaCoreNetworking;
+using NovaCore;
 using Packets;
 using System.Linq;
 using UnityEngine;

@@ -1,7 +1,7 @@
 using Assets.Scripts.Entities;
 using CerberusClient.Network.Data;
-using NovaCoreNetworking;
-using NovaCoreNetworking.Utils;
+using NovaCore;
+using NovaCore.Utils;
 using System;
 using TMPro;
 using UnityEngine;
@@ -88,7 +88,7 @@ public class NetworkManager : MonoBehaviour {
 
     public void ConnectGameServer(GameServerData gameServerData) {
         isConnectingToGameServer = true;
-        NovaCoreLogger.Log(NovaCoreNetworking.Utils.LogType.Debug, "Attemping connection to game server");
+        NovaCoreLogger.Log(NovaCore.Utils.LogType.Debug, "Attemping connection to game server");
         Client.Connect($"{gameServerData.serverIp}:{gameServerData.serverPort}");
         _currentlyConnectedGameServer = gameServerData;
     }

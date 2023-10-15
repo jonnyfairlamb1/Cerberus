@@ -1,10 +1,10 @@
 ﻿using CommonData.DTOs;
-using DatabaseAccessService.Application.Features.BaseWeapons.Requests;
-using DatabaseAccessService.Application.Features.CharacterData.Requests;
-using DatabaseAccessService.Application.Features.ErrorMessages.Requests;
-using DatabaseAccessService.Application.Features.JoinRandomGame.Requests;
-using DatabaseAccessService.Application.Features.PlayerData.Requests;
-using DatabaseAccessService.Application.Features.RegisterServer.Requests;
+using DatabaseAccessService.Features.BaseWeapons.Requests;
+using DatabaseAccessService.Features.CharacterData.Requests;
+using DatabaseAccessService.Features.ErrorMessages.Requests;
+using DatabaseAccessService.Features.GetPlayerData.Requests;
+using DatabaseAccessService.Features.JoinRandomGame.Requests;
+using DatabaseAccessService.Features.RegisterServer.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

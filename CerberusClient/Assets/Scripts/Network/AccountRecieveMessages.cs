@@ -1,4 +1,4 @@
-using NovaCoreNetworking;
+using NovaCore;
 using Packets;
 using System.Linq;
 using UnityEngine;

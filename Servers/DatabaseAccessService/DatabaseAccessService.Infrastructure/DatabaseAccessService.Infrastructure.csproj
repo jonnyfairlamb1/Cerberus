@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -18,17 +18,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.90" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.120" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\_Libs\CommonData\CommonData.csproj" />
     <ProjectReference Include="..\DatabaseAccessService.Domain\DatabaseAccessService.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CommonData">
-      <HintPath>..\..\..\_Libs\CommonData\bin\Debug\net5.0\CommonData.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

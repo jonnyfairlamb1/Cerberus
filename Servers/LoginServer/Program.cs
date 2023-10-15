@@ -1,5 +1,5 @@
 ﻿using CerberusLoginServer.Networking;
-using NovaCoreNetworking.Utils;
+using NovaCore.Utils;
 
 namespace CerberusLoginServer {
 

@@ -3,8 +3,8 @@ using CommonData.Extensions;
 using CommonData.PlayerSendData;
 using CommonData.ServerData;
 using LoginServer.Proxy;
-using NovaCoreNetworking;
-using NovaCoreNetworking.Utils;
+using NovaCore;
+using NovaCore.Utils;
 using Packets;
 
 namespace CerberusLoginServer.Networking;
