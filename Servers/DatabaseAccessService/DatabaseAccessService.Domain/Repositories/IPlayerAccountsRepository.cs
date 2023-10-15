@@ -11,13 +11,5 @@ namespace DatabaseAccessService.Domain.Repositories {
         Task<DBPlayer?> GetPlayerDataAsync(string steamID);
 
         Task<bool> LogoutAsync(string steamID);
-
-        Task<List<WeaponLoadouts>?> GetWeaponLoadoutsAsync(string steamID, List<CustomWeapon> customWeapons);
-
-        Task<List<CustomWeapon>> GetCustomWeaponsAsync(string steamID);
-
-        Task<List<OwnedSkinsTuple>> GetPlayerSkinsAsync(string steamID);
-
-        Task<List<EquippedSkinsTuple>> GetPlayerEquippedSkinsAsync(string steamId);
     }
 }

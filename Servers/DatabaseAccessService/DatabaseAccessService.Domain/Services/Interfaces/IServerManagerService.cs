@@ -29,24 +29,5 @@ namespace DatabaseAccessService.Domain.Services.Interfaces {
         /// <returns></returns>
         /// <exception cref="RecordNotFoundException"></exception>
         Task<Dictionary<int, ErrorMessage>> GetErrorMessages();
-
-        /// <summary>
-        /// Joins a random game lobby in the pool
-        /// </summary>
-        /// <param name="joiningPlayer"></param>
-        /// <returns></returns>
-        Task<Lobby?> JoinRandomGameAsync(DBPlayer joiningPlayer);
-
-        /// <summary>
-        /// Gets the base weapons from the database or the cache
-        /// </summary>
-        /// <returns>BaseWeapon list</returns>
-        Task<List<BaseWeapon>> GetBaseWeaponsAsync();
-
-        /// <summary>
-        /// Gets all of the character data from the database or cache including skins and abilities
-        /// </summary>
-        /// <returns>Dictionary of base character, this includes abilities and skins</returns>
-        Task<Dictionary<int, BaseCharacter>> GetCharacterDataAsync();
     }
 }

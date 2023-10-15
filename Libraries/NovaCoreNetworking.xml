@@ -4311,77 +4311,6 @@
             <param name="forReason">The <see cref="T:NovaCore.RejectReason"/> to retrieve the string for.</param>
             <returns>The appropriate reason string.</returns>
         </member>
-        <member name="T:NovaCore.Utils.PriorityQueue`2">
-            <summary>
-            Represents a collection of items that have a value and a priority. On dequeue, the item with
-            the lowest priority value is removed.
-            </summary>
-            <typeparam name="TElement">Specifies the type of elements in the queue.</typeparam>
-            <typeparam name="TPriority">
-            Specifies the type of priority associated with enqueued elements.
-            </typeparam>
-        </member>
-        <member name="P:NovaCore.Utils.PriorityQueue`2.Count">
-            <summary>
-            Gets the number of elements contained in the <see cref="T:NovaCore.Utils.PriorityQueue`2"/>.
-            </summary>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.#ctor(System.Int32)">
-            <summary>
-            Initializes a new instance of the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> class.
-            </summary>
-            <param name="capacity">Initial capacity to allocate for the underlying heap array.</param>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.#ctor(System.Collections.Generic.IComparer{`1},System.Int32)">
-            <summary>
-            Initializes a new instance of the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> class
-            with the specified custom priority comparer.
-            </summary>
-            <param name="comparer">Custom comparer dictating the ordering of elements.</param>
-            <param name="capacity">Initial capacity to allocate for the underlying heap array.</param>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.Enqueue(`0,`1)">
-            <summary>
-            Adds the specified element and associated priority to the <see
-            cref="T:NovaCore.Utils.PriorityQueue`2"/>.
-            </summary>
-            <param name="element">The element to add.</param>
-            <param name="priority">The priority with which to associate the new element.</param>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.Dequeue">
-            <summary>
-            Removes and returns the lowest priority element.
-            </summary>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.TryDequeue(`0@,`1@)">
-            <summary>
-            Removes the lowest priority element from the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> and copies it and its associated priority to the <paramref
-            name="element"/> and <paramref name="priority"/> arguments.
-            </summary>
-            <param name="element">When this method returns, contains the removed element.</param>
-            <param name="priority">
-            When this method returns, contains the priority associated with the removed element.
-            </param>
-            <returns>
-            true if the element is successfully removed; false if the <see
-            cref="T:NovaCore.Utils.PriorityQueue`2"/> is empty.
-            </returns>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.Peek">
-            <summary>
-            Returns the lowest priority element.
-            </summary>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.PeekPriority">
-            <summary>
-            Returns the priority of the lowest priority element.
-            </summary>
-        </member>
-        <member name="M:NovaCore.Utils.PriorityQueue`2.Clear">
-            <summary>
-            Removes all elements from the <see cref="T:NovaCore.Utils.PriorityQueue`2"/>.
-            </summary>
-        </member>
         <member name="T:NovaCore.Utils.LogType">
             <summary>
             Defines log message types.
@@ -4519,6 +4448,77 @@
             </summary>
             <param name="time">The time to format.</param>
             <returns>The formatted timestamp.</returns>
+        </member>
+        <member name="T:NovaCore.Utils.PriorityQueue`2">
+            <summary>
+            Represents a collection of items that have a value and a priority. On dequeue, the item with
+            the lowest priority value is removed.
+            </summary>
+            <typeparam name="TElement">Specifies the type of elements in the queue.</typeparam>
+            <typeparam name="TPriority">
+            Specifies the type of priority associated with enqueued elements.
+            </typeparam>
+        </member>
+        <member name="P:NovaCore.Utils.PriorityQueue`2.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:NovaCore.Utils.PriorityQueue`2"/>.
+            </summary>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> class.
+            </summary>
+            <param name="capacity">Initial capacity to allocate for the underlying heap array.</param>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.#ctor(System.Collections.Generic.IComparer{`1},System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> class
+            with the specified custom priority comparer.
+            </summary>
+            <param name="comparer">Custom comparer dictating the ordering of elements.</param>
+            <param name="capacity">Initial capacity to allocate for the underlying heap array.</param>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.Enqueue(`0,`1)">
+            <summary>
+            Adds the specified element and associated priority to the <see
+            cref="T:NovaCore.Utils.PriorityQueue`2"/>.
+            </summary>
+            <param name="element">The element to add.</param>
+            <param name="priority">The priority with which to associate the new element.</param>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.Dequeue">
+            <summary>
+            Removes and returns the lowest priority element.
+            </summary>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.TryDequeue(`0@,`1@)">
+            <summary>
+            Removes the lowest priority element from the <see cref="T:NovaCore.Utils.PriorityQueue`2"/> and copies it and its associated priority to the <paramref
+            name="element"/> and <paramref name="priority"/> arguments.
+            </summary>
+            <param name="element">When this method returns, contains the removed element.</param>
+            <param name="priority">
+            When this method returns, contains the priority associated with the removed element.
+            </param>
+            <returns>
+            true if the element is successfully removed; false if the <see
+            cref="T:NovaCore.Utils.PriorityQueue`2"/> is empty.
+            </returns>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.Peek">
+            <summary>
+            Returns the lowest priority element.
+            </summary>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.PeekPriority">
+            <summary>
+            Returns the priority of the lowest priority element.
+            </summary>
+        </member>
+        <member name="M:NovaCore.Utils.PriorityQueue`2.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:NovaCore.Utils.PriorityQueue`2"/>.
+            </summary>
         </member>
     </members>
 </doc>

@@ -1,9 +1,6 @@
 ﻿using CommonData.DTOs;
-using DatabaseAccessService.Features.BaseWeapons.Requests;
-using DatabaseAccessService.Features.CharacterData.Requests;
 using DatabaseAccessService.Features.ErrorMessages.Requests;
 using DatabaseAccessService.Features.GetPlayerData.Requests;
-using DatabaseAccessService.Features.JoinRandomGame.Requests;
 using DatabaseAccessService.Features.RegisterServer.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -46,45 +43,6 @@ namespace DatabaseAccessService.Controllers {
             }
         }
 
-        /// <summary>
-        /// Get all the base weapons from the database, this should only be called from a server
-        /// </summary>
-        /// <returns>list of base weapon objeect</returns>
-        /// <response code="200">Returns the list of base weapon objects correctly</response>
-        /// <response code="400">Returns an error message if the list failed to be retrieved</response>
-        [HttpGet, Route("[action]")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<BaseWeaponsDTO>> BaseWeapons([FromQuery] BaseWeaponsRequest query) {
-            try {
-                BaseWeaponsDTO dto = await _mediator.Send(query);
-                return dto;
-            } catch (Exception exception) {
-                const string message = "Getting base weapons failed for unknown reason";
-                _logger.LogCritical(exception, message);
-                return BadRequest(message);
-            }
-        }
-
-        /// <summary>
-        /// Get character data from the database, this should only be called from a server
-        /// </summary>
-        /// <returns>Dictionary of character objects</returns>
-        /// <response code="200">Returns the dictionary of character objects correctly</response>
-        /// <response code="400">Returns an error message if the dictionary failed to be retrieved</response>
-        [HttpGet, Route("[action]")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<CharacterDataDTO>> GetCharacterData([FromQuery] CharacterDataRequest query) {
-            try {
-                CharacterDataDTO dto = await _mediator.Send(query);
-                return dto;
-            } catch (Exception exception) {
-                const string message = "Getting character data failed for unknown reason";
-                _logger.LogCritical(exception, message);
-                return BadRequest(message);
-            }
-        }
 
         /// <summary>
         /// Register the game server with the service, this should only be called from a game server.
@@ -101,27 +59,6 @@ namespace DatabaseAccessService.Controllers {
                 return dto;
             } catch (Exception exception) {
                 const string message = "registering game server failed for unknown reason";
-                _logger.LogCritical(exception, message);
-                return BadRequest(message);
-            }
-        }
-
-        /// <summary>
-        /// Finds a lobby with space for the player requesting. This should only be called from the
-        /// login server as a proxy for the client.
-        /// </summary>
-        /// <returns>DB player object that represents all of the account data for that player.</returns>
-        /// <response code="200">Returns the DB player object correctly</response>
-        /// <response code="400">Returns an error message if the player was failed to be retrieved</response>
-        [HttpGet, Route("[action]")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<JoinRandomGameDTO>> JoinRandomGameAsync([FromQuery] JoinRandomGameRequest query) {
-            try {
-                JoinRandomGameDTO dto = await _mediator.Send(query);
-                return dto;
-            } catch (Exception exception) {
-                const string message = "joining game failed for unknown reason";
                 _logger.LogCritical(exception, message);
                 return BadRequest(message);
             }

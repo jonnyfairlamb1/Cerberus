@@ -1,5 +1,3 @@
-using Assets.Scripts.Entities;
-using CerberusClient.Network.Data;
 using NovaCore;
 using NovaCore.Utils;
 using System;
@@ -12,8 +10,6 @@ public class NetworkManager : MonoBehaviour {
 
     public Client Client { get; private set; }
 
-    public GameServerData _currentlyConnectedGameServer;
-
     private ushort _serverTick;
 
     public ushort ServerTick {
@@ -23,8 +19,6 @@ public class NetworkManager : MonoBehaviour {
             InterpolationTick = (ushort)(value - TicksBetweenPositionUpdates);
         }
     }
-
-    private bool isConnectingToGameServer = false;
 
     public ushort InterpolationTick { get; private set; }
 
@@ -74,77 +68,17 @@ public class NetworkManager : MonoBehaviour {
     }
 
     private void DidConnect(object sender, EventArgs e) {
-        if (!isConnectingToGameServer) {
-            NetworkSend.SendLogin(GameManager.instance._localPlayerData.steamID, GameManager.instance._localPlayerData.steamName);
-        } else {
-            NetworkSend.SendLobbyIdToGameServer(_currentlyConnectedGameServer);
-        }
+        Debug.Log("Connected to server");
+        NetworkSend.SendLogin("Test","Test");
     }
 
     private void FailedToConnect(object sender, EventArgs e) {
         Debug.Log("Failed to connect and show error message");
-        //UIManager.Singleton.BackToMain();
     }
 
-    public void ConnectGameServer(GameServerData gameServerData) {
-        isConnectingToGameServer = true;
-        NovaCoreLogger.Log(NovaCore.Utils.LogType.Debug, "Attemping connection to game server");
-        Client.Connect($"{gameServerData.serverIp}:{gameServerData.serverPort}");
-        _currentlyConnectedGameServer = gameServerData;
-    }
-
-    public void InstantiatePlayerCharacter(GamePlayerData gamePlayerData) {
-        //TODO: create the gameobject using a skinDB class
-        var playerCharacter = Instantiate(GameManager.instance._basePlayerPrefab, gamePlayerData.currentPosition, gamePlayerData.currentRotation);
-        var playerData = playerCharacter.AddComponent<Player>();
-
-        TMP_Text[] playerCharacterTextFields = playerCharacter.GetComponentsInChildren<TMP_Text>();
-
-        if (gamePlayerData.playerId == GameManager.instance._localPlayerData.clientId) {
-            var playerController = Instantiate(GameManager.instance._basePlayerControllerPrefab, playerCharacter.transform);
-            var playerUi = Instantiate(GameManager.instance._playerUiPrefab, playerCharacter.transform);
-
-            //Setup the ui elements
-            var crosshair = playerUi.GetComponentInChildren<Crosshair>();
-            var compass = playerUi.GetComponentInChildren<Compass>();
-            var weaponController = playerController.GetComponentInChildren<WeaponController>();
-            var interactManager = playerController.GetComponentInChildren<InteractManager>();
-            var jumpMotionController = playerController.GetComponentInChildren<JumpMotion>();
-            var jumpMotionUI = playerUi.GetComponentInChildren<JumpMotion>();
-            var playerStats = playerController.GetComponentInChildren<PlayerStats>();
-
-            var playerMovement = playerController.GetComponentInChildren<PlayerMovement>();
-            crosshair.player = playerMovement;
-            jumpMotionController.player = playerMovement;
-            jumpMotionUI.player = playerMovement;
-
-            compass.player = playerCharacter.transform;
-            weaponController.inventoryContainer = GameObject.Find("InventoryContainer").GetComponent<CanvasGroup>();
-            weaponController.bulletsUI = GameObject.Find("BulletsUI").GetComponent<TextMeshProUGUI>();
-            weaponController.magazineUI = GameObject.Find("MagazineUI").GetComponent<TextMeshProUGUI>();
-            weaponController.reloadUI = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
-            weaponController.lowAmmoUI = GameObject.Find("LowAmmoText").GetComponent<TextMeshProUGUI>();
-            weaponController.currentWeaponDisplay = GameObject.Find("CurrentWeapon").GetComponent<Image>();
-            interactManager.interactUI = GameObject.Find("InteractUI");
-            playerStats.healthSlider = GameObject.Find("healthSlider").GetComponentInChildren<Slider>();
-            playerStats.shieldSlider = GameObject.Find("shieldSlider").GetComponentInChildren<Slider>();
-            playerStats.healthStatesEffect = GameObject.Find("HealthStatesEffect").GetComponentInChildren<Image>();
-
-            var mainCamera = GameObject.FindGameObjectsWithTag("MainCamera");
-            for (int i = 0; i < mainCamera.Length; i++) {
-                Destroy(mainCamera[i]);
-            }
-
-            GameManager.instance._characterSelectionUI.SetActive(false);
-        }
-
-        playerData.playerId = gamePlayerData.playerId;
-        playerData.steamName = gamePlayerData.steamName;
-        playerData.steamId = gamePlayerData.steamId;
-        playerData.teamId = gamePlayerData.teamId;
-        playerData.currentCharacter = gamePlayerData.currentCharacter;
-
-        playerCharacter.name = $"{gamePlayerData.steamName}: {gamePlayerData.playerId}";
-        playerData.UpdateTextFields(playerCharacterTextFields);
+    public void ConnectToGameServer()
+    {
+        //Client.Disconnect();
+        Client.Connect($"{ip}:{5101}");
     }
 }

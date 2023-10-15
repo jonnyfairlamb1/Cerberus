@@ -58,140 +58,39 @@
     <Analyzer Include="C:\Users\Jonny\Documents\UnityEditors\2022.3.5f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NovaFPS\Scripts\UI\UIController.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Utilities\DestroyMe.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Enemies\TrainingTarget.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\PickUpSystem\Pickeable.cs" />
-    <Compile Include="Assets\Scripts\UI\WeaponEditorManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponDefaultState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\UI\CrosshairShape.cs" />
-    <Compile Include="Assets\Scripts\Entities\CustomWeapon.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\PointCapture.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponBaseState.cs" />
-    <Compile Include="Assets\Scripts\UI\LoadingScreen.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Interactable.cs" />
-    <Compile Include="Assets\Scripts\Entities\PlayerData.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\PickUpSystem\InteractManagerEditor.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Crate.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\WeaponBob.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Managers\CowsinsUtilities.cs" />
-    <Compile Include="Assets\Scripts\Characters\BaseCharacterAbility.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponStates.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerStateFactory.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Managers\SoundManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\DisplayKey.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\CrouchTilt.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerStatsEditor.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Compass.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\MeleeState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Weapons\Weapon_SO.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\CameraTilt.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerJumpState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Enemies\IDamageable.cs" />
     <Compile Include="Assets\Scripts\UI\MenuManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerDefaultState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\HeadBob.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponStateFactory.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\PauseMenu.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\HurtTrigger.cs" />
-    <Compile Include="Assets\Scripts\Entities\CharacterSkin.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\CamShake.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Character.cs" />
-    <Compile Include="Assets\Scripts\Entities\BaseCharacter.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\PowerUp.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Weapons\WeaponIdentification.cs" />
-    <Compile Include="Assets\Scripts\Network\Data\GameServerData.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\PickUpSystem\BulletsPickeable.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Utilities\LookAt.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\DamageMultiplier.cs" />
-    <Compile Include="Assets\Scripts\Entities\WeaponLoadouts.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Utilities\IgnoreCollision.cs" />
-    <Compile Include="Assets\Scripts\Entities\GamePlayerData.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\UI\CrosshairShapeEditor.cs" />
     <Compile Include="Assets\Scripts\Network\LoginServerRecieveMessages.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponShootingState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Movement\PlayerMovementEditor.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\WeaponSway.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\GetGameInformation.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\DoorInteractable.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\CheckPoint.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Network\GameServerReceiveMessages.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\WeaponState\WeaponReloadState.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Network\AccountRecieveMessages.cs" />
-    <Compile Include="Assets\Scripts\UI\CharacterSelectionManager.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkSend.cs" />
-    <Compile Include="Assets\Scripts\Entities\PlayerLoadout.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\UI\Crosshair.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\UI\Hitmarker.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\UI\UISlot.cs" />
-    <Compile Include="Assets\NovaFPS\Inputs\PlayerActions.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerStates.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\HealMultiplierPowerUp.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\ExplosiveBarrel.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Weapons\WeaponController.cs" />
     <Compile Include="Assets\Scripts\Steamworks.NET\SteamManager.cs" />
-    <Compile Include="Assets\Scripts\UI\CharacterManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerDeadState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Movement\PlayerMovement.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\PickUpSystem\InteractManager.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Healthpack.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerCrouchState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\PickUpSystem\WeaponPickeable.cs" />
-    <Compile Include="Assets\Scripts\UI\CharacterEditorManager.cs" />
     <Compile Include="Assets\Scripts\Network\Packets.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Weapons\WeaponControllerEditor.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\JumpMotion.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerState\PlayerBaseState.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\CompassElement.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Camera\MoveCamera.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Weapons\Bullet.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\Destructible.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Extra\ShowAndHide.cs" />
-    <Compile Include="Assets\Scripts\Entities\BaseWeapons.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Player\PlayerStats.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Effects\Breathing.cs" />
-    <Compile Include="Assets\NovaFPS\Scripts\Managers\InputManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\Blockout\Resources\Blockout\Pins\Blockout_Pin_Shader.shader" />
-    <None Include="Assets\NovaFPS\Scripts\Movement\dani_license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\NovaFPS\UI\Typography\Outfit_Complete\License\OFL.txt" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Leaf_2018.shader" />
-    <None Include="Assets\Blockout\Resources\Blockout\Ruler\Ruler_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Blockout\Shaders\Area_Comment_Wireframe_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api64.dll" />
-    <None Include="Assets\Blockout\Shaders\Gate_Particle_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Shader_Tri_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\Blockout\Resources\Blockout\Pins\Pin_Backfacing.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Blockout\Shaders\Editor_Trigger_2018.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Shader_Base_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Comment_Shader_2018.shader" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Depth_Blend_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Blockout\Shaders\Blockout_Water_2018.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
@@ -832,9 +731,6 @@
     <Reference Include="Unity.Services.Analytics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
@@ -859,17 +755,8 @@
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
@@ -880,20 +767,17 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+      <HintPath>Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Sysroot.Linux_x86_64">
+      <HintPath>Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Mediation">
-      <HintPath>Library\ScriptAssemblies\Unity.Mediation.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -928,9 +812,6 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
-    <Reference Include="Purchasing.Common">
-      <HintPath>Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
@@ -948,6 +829,9 @@
     </Reference>
     <Reference Include="Unity.Services.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SysrootPackage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
@@ -976,17 +860,9 @@
       <Project>{52054755-F923-477B-9C26-2FB382F14D76}</Project>
       <Name>com.rlabrecque.steamworks.net</Name>
     </ProjectReference>
-    <ProjectReference Include="RadicalForge.Blockout.Editor.csproj">
-      <Project>{AA83434F-22A4-0AFC-0284-23407BCC9B4A}</Project>
-      <Name>RadicalForge.Blockout.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="com.rlabrecque.steamworks.net.editor.csproj">
       <Project>{6031D2EB-D533-4108-B6C8-145634600D0C}</Project>
       <Name>com.rlabrecque.steamworks.net.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="RadicalForge.Blockout.csproj">
-      <Project>{841B7951-C478-2240-DD3E-4560EE013438}</Project>
-      <Name>RadicalForge.Blockout</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

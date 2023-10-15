@@ -7,7 +7,6 @@
         LS_OwnedCharacterSkins,
         LS_BaseWeaponData,
         LS_CharacterData,
-        LS_CharacterAbilityData,
         LS_CharacterSkinData,
         LS_EndOfPlayerData,
         LS_JoinedGame,

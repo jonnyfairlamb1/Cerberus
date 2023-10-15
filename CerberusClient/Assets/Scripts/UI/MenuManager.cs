@@ -51,17 +51,11 @@ public class MenuManager : MonoBehaviour {
 
     public void LoginMenuLoginButton() {
         _loginButton.interactable = false;
+
         if (GameManager.instance.RunWithoutLoginServer) {
             Debug.LogError("Starting client in [Run Without Login Server] enabled");
             GoToMainMenu();
-            UpdatePlayerSteamData();
         } else {
-            if (string.IsNullOrEmpty(GameManager.instance._localPlayerData.steamID)) {
-                _loginButton.interactable = true;
-                Debug.LogError("Steam not initialized please check to see if it is running");
-                return;
-            }
-
             NetworkManager.instance.Connect();
         }
     }
@@ -121,21 +115,9 @@ public class MenuManager : MonoBehaviour {
         _CharacterManagementPanel.SetActive(true);
     }
 
-    public void UpdatePlayerSteamData() {
-        _player_Currency.text = _availableCurrency;
-        _player_Username.text = GameManager.instance._localPlayerData.steamName;
-        _steam_Icon.texture = GetSteamImageAsTexture2D(SteamFriends.GetLargeFriendAvatar(new CSteamID(ulong.Parse(GameManager.instance._localPlayerData.steamID))));
-    }
-
     public void JoinGameButton() {
         NovaCoreLogger.Log(NovaCore.Utils.LogType.Debug, "Sending join game request");
-        NetworkSend.SendJoinGameRequest();
-    }
-
-    public void StartLoadingScreen(string mapName, string gamemodeName, string modeAbbreviation) {
-        _LoadingScreenPanel.SetActive(true);
-        var loadingScreen = _LoadingScreenPanel.GetComponent<LoadingScreen>();
-        loadingScreen.StartLoadingScreen(mapName, gamemodeName, modeAbbreviation);
+        NetworkManager.instance.ConnectToGameServer();
     }
 
     public static Texture2D GetSteamImageAsTexture2D(int iImage) {

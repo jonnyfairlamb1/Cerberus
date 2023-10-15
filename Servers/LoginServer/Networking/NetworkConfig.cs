@@ -27,8 +27,6 @@ public static class NetworkConfig {
         serverLoopThread.Start();
 
         await DataProxy.GetErrorMessagesAsync();
-        await DataProxy.GetBaseWeapons();
-        await DataProxy.GetCharacterData();
         _acceptingConnections = true;
         NovaCoreLogger.Log(LogType.Info, "All data recieved. Waiting on client connection.");
     }
@@ -62,6 +60,8 @@ public static class NetworkConfig {
     }
 
     public static string GetIPAddress(ushort connectionID) {
+        //TODO: this needs refactoring to make more efficient.
+
         for (int i = 0; i < server.Clients.Length; i++) {
             if (server.Clients[i].Id == connectionID) {
                 Connection connection = server.Clients[i];

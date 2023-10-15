@@ -31,8 +31,6 @@ namespace CommonData.GameServer {
         public Vector3 currentPosition;
         public Quaternion currentRotation;
         public PlayerRole role;
-        public BaseCharacter currentCharacter;
-        public CharacterSkins currentCharacterSkin;
 
         public GamePlayerData(ushort clientId, DBPlayer dbPlayer, int teamId, Vector3 currentPosition, Quaternion currentRotation,
             PlayerRole playerRole) {

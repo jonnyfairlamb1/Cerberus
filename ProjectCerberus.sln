@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{443F5A73-CA89-4CE0-A22C-0DE12C61D736}"
 	ProjectSection(SolutionItems) = preProject
-		Packets.cs = Packets.cs
+		Libraries\Packets.cs = Libraries\Packets.cs
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonData", "_Libs\CommonData\CommonData.csproj", "{98B524F6-B03E-4BB1-BEDC-8D2606F600DE}"

@@ -13,18 +13,10 @@ namespace CommonData.PlayerSendData {
         [JsonPropertyName("playerLevel")]
         public int PlayerLevel { get; set; }
 
-        [JsonPropertyName("battlepassLevel")]
-        public int BattlepassLevel { get; set; }
-
-        [JsonPropertyName("currencyAmount")]
-        public int CurrencyAmount { get; set; }
-
-        public PlayerData(string steamName, string steamID, int playerLevel, int battlePassLevel, int currencyAmount) {
+        public PlayerData(string steamName, string steamID, int playerLevel) {
             SteamName = steamName;
             SteamID = steamID;
             PlayerLevel = playerLevel;
-            BattlepassLevel = battlePassLevel;
-            CurrencyAmount = currencyAmount;
         }
 
         public PlayerData() {

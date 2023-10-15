@@ -1,10 +1,10 @@
 OracleDB/
 .vs/
-CerberusClient/Library/
-CerberusClient/Logs/
-CerberusClient/ProjectSettings/
-CerberusClient/UserSettings/
-CerberusClient/Packages/
+Library/
+Logs/
+ProjectSettings/
+UserSettings/
+Packages/
 Builds/
 bin
 obj

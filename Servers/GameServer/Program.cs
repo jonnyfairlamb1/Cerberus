@@ -17,7 +17,6 @@ namespace CerberusGameServer {
             NovaCoreLogger.Initialize(Console.WriteLine, true);
 
             ServerData._errorMessages = HttpRequests.GetErrorMessages().Result;
-            ServerData._characters = HttpRequests.GetCharacterData().Result;
             ServerData._gameServer = HttpRequests.RegisterServerAsync("127.0.0.1", _portNumber, _numberOfLobbies).Result;
 
             for (int i = 0; i < ServerData._gameServer.Lobbies.Count; i++) {
