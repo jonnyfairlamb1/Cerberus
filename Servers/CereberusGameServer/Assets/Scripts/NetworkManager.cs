@@ -1,5 +1,7 @@
+using Assets.Scripts;
 using NovaCore;
 using NovaCore.Utils;
+using Packets;
 #if !UNITY_EDITOR
 using System;
 #endif
@@ -31,6 +33,7 @@ public class NetworkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
 
@@ -62,10 +65,7 @@ public class NetworkManager : MonoBehaviour
     }
 
     private void NewPlayerConnected(object sender, ServerConnectedEventArgs e) {
-        //foreach (Player player in Player.List.Values) {
-        //    if (player.Id != e.Client.Id)
-        //        player.SendSpawn(e.Client.Id);
-        //}
+        GameManager.Instance.NewPlayerJoined(e.Client.Id);
     }
 
     private void PlayerDisconnected(object sender, ServerDisconnectedEventArgs e) {

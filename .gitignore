@@ -11,3 +11,7 @@ obj
 packages
 *.Meta
 
+
+CerberusClient/Assets/PolygonBattleRoyale/
+
+Servers/CereberusGameServer/Assets/PolygonBattleRoyale/

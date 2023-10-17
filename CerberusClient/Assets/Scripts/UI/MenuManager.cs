@@ -52,7 +52,7 @@ public class MenuManager : MonoBehaviour {
     public void LoginMenuLoginButton() {
         _loginButton.interactable = false;
 
-        if (GameManager.instance.RunWithoutLoginServer) {
+        if (GameManager.Instance.RunWithoutLoginServer) {
             Debug.LogError("Starting client in [Run Without Login Server] enabled");
             GoToMainMenu();
         } else {

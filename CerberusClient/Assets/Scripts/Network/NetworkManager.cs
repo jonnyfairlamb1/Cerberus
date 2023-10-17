@@ -69,7 +69,6 @@ public class NetworkManager : MonoBehaviour {
 
     private void DidConnect(object sender, EventArgs e) {
         Debug.Log("Connected to server");
-        NetworkSend.SendLogin("Test","Test");
     }
 
     private void FailedToConnect(object sender, EventArgs e) {

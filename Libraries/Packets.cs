@@ -15,16 +15,13 @@
     }
     enum ClientPackets {
         C_Login = 100,
-        C_Weapon_Data,
-        C_JoinRandomGame,
-        C_LobbyId,
-        C_PlayerChoseCharacter,
-        C_PlayerChoseLoadout,
+        C_GameSceneLoaded,
     }
 
     enum GameServerPackets {
         GS_ErrorMessage = 1000,
         GS_ClientId,
+        GS_PlayerGameData,
         GS_PlayerJoinedLobby,
         GS_PlayerLeftLobby,
         GS_PlayerTransformUpdate,
