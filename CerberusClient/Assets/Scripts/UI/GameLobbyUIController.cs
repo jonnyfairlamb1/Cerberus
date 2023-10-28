@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using Assets.Scripts;
+using Assets.Scripts.Network.GameServer;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameLobbyUIController : MonoBehaviour
@@ -27,8 +29,11 @@ public class GameLobbyUIController : MonoBehaviour
     public TMP_Text CountdownTimerText;
     public GameObject PlayerNamePanel;
 
+    public GameObject LoadingScreen;
+    public TMP_Text LoadingText;
+
     private Timer _countdownTimer;
-    private int _countdownTimerValue;
+    private float _countdownTimerValue;
     private List<TMP_Text> _buttonVoteText;
     [SerializeField]private GameObject _lobbyPanel;
     private List<GameObject> _lobbyList = new();
@@ -38,7 +43,19 @@ public class GameLobbyUIController : MonoBehaviour
         Instance = this;
     }
 
-    public void AddPlayerName(List<string> playerNames)
+    public void ShowLoadingScreen(bool bActive) {
+        LoadingScreen.SetActive(bActive);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.SetActiveScene(scene);
+
+        GameServerSend.SendSceneLoaded();
+        LoadingText.text = "Waiting on other players...";
+    }
+
+    public void UpdateLobbyScreen()
     {
         for (int i = 0; i < _lobbyList.Count; i++)
         {
@@ -47,15 +64,15 @@ public class GameLobbyUIController : MonoBehaviour
 
         _lobbyList.Clear();
 
-        foreach (var playerName in playerNames)
+        foreach (var playerData in GameManager.Instance.PlayerData.Values)
         {
-            NameTextPrefab.GetComponent<TMP_Text>().text = playerName;
-            NameTextPrefab.name = playerName;
-            Instantiate(NameTextPrefab, PlayerNamePanel.transform);
+            var nameTextObj = Instantiate(NameTextPrefab, PlayerNamePanel.transform);
+            nameTextObj.GetComponent<TMP_Text>().text = playerData.SteamName;
+            _lobbyList.Add(nameTextObj);
         }
     }
 
-    public void SetupLobby(GameState gameState, int countdownTimerValue)
+    public void SetupLobby(GameState gameState, float countdownTimerValue)
     {
         _lobbyPanel.SetActive(true);
         if (gameState == GameState.PreLobby)
@@ -69,7 +86,7 @@ public class GameLobbyUIController : MonoBehaviour
         CountdownTimerText.text = "Waiting for more players to join...";
     }
 
-    private void IsInLobby(int countdownTimerValue)
+    private void IsInLobby(float countdownTimerValue)
     {
         _countdownTimer = new Timer(countdownTimerValue);
         _countdownTimerValue = countdownTimerValue;

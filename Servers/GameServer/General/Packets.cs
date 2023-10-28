@@ -16,6 +16,7 @@
     enum ClientPackets {
         C_Login = 100,
         C_GameSceneLoaded,
+        C_PlayerTransformUpdate
     }
 
     enum GameServerPackets {
@@ -24,6 +25,9 @@
         GS_PlayerGameData,
         GS_PlayerJoinedLobby,
         GS_PlayerLeftLobby,
+        GS_ForeignPlayerJoinedGame,
+        GS_LocalPlayerJoinedGame,
+        GS_PlayerLeftGame,
         GS_PlayerTransformUpdate,
         GS_PlayerChoseCharacter,
         GS_GameStarted,

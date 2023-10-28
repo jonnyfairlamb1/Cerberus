@@ -24,9 +24,7 @@ public class NetworkManager : MonoBehaviour
 
     [SerializeField] private ushort port;
     [SerializeField] private ushort maxClientCount;
-    [SerializeField] private GameObject playerPrefab;
 
-    public GameObject PlayerPrefab => playerPrefab;
 
     public Server Server { get; private set; }
 
@@ -68,7 +66,8 @@ public class NetworkManager : MonoBehaviour
         GameManager.Instance.NewPlayerJoined(e.Client.Id);
     }
 
-    private void PlayerDisconnected(object sender, ServerDisconnectedEventArgs e) {
-        //Destroy(Player.List[e.Client.Id].gameObject);
+    private void PlayerDisconnected(object sender, ServerDisconnectedEventArgs e)
+    {
+        GameManager.Instance.PlayerDisconnected(e.Client.Id);
     }
 }

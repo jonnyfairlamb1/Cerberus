@@ -10902,6 +10902,8 @@ MonoBehaviour:
   NameTextPrefab: {fileID: 6901302310899191403, guid: 57164dcd5f215c646894f15de3a8dab9, type: 3}
   CountdownTimerText: {fileID: 735770189}
   PlayerNamePanel: {fileID: 1893752184}
+  LoadingScreen: {fileID: 1854684993}
+  LoadingText: {fileID: 281016783}
   _lobbyPanel: {fileID: 1084375862}
 --- !u!1 &1060463851
 GameObject:
@@ -11329,7 +11331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084375864
@@ -21219,10 +21221,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RunWithoutLoginServer: 1
   RunWithoutGameServer: 0
-  Players: []
-  PlayerPrefab: {fileID: 8586141927491354736, guid: e589743030bc99a45b5b83616f9bf86c, type: 3}
-  LoadingScreen: {fileID: 1854684993}
-  LoadingText: {fileID: 281016783}
+  NetworkPlayerPrefab: {fileID: 1048918190391116353, guid: 102054b0c1bd565479b6d3ca991bca94, type: 3}
+  LocalPlayerPrefab: {fileID: 1048918190391116353, guid: a4eeff4430e6a554092e2ed823e41abc, type: 3}
+  LocalPlayerSteamId: Player1
+  LocalPlayerSteamName: SteamName
 --- !u!114 &2041472503
 MonoBehaviour:
   m_ObjectHideFlags: 0

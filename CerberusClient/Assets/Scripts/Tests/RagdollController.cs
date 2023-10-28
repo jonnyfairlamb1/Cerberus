@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RagdollController : MonoBehaviour
@@ -35,14 +36,27 @@ public class RagdollController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         var allRigidbodies = GetComponentsInChildren<Rigidbody>();
+        var allColliders = GetComponentsInChildren<Collider>();
 
         foreach (var rb in allRigidbodies) {
             ragdollRigidBodies.Add(rb); // add to list
         }
+
+        foreach (var collider in allColliders)
+        {
+            collider.enabled = false;
+        }
+
+        allCollider = allColliders.ToArray();
     }
 
     public void EnableRagdoll(bool enableRagdoll) {
         anim.enabled = !enableRagdoll;
+
+        foreach (var collider in allCollider)
+        {
+            collider.enabled = enableRagdoll;
+        }
 
         foreach (var ragdollRigidBody in ragdollRigidBodies) {
             ragdollRigidBody.useGravity = enableRagdoll; // make rigidbody use gravity if ragdoll is active
@@ -53,10 +67,8 @@ public class RagdollController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        if (Input.GetKeyDown(KeyCode.F1)) {
             EnableRagdoll(true);
         }
     }
-
 }

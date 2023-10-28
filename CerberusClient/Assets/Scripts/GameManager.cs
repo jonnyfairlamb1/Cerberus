@@ -25,17 +25,17 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-
     protected Callback<GameOverlayActivated_t> m_GameOverlayActivated;
 
     public bool RunWithoutLoginServer = false;
     public bool RunWithoutGameServer = false;
 
-    public List<GameObject> Players;
-    public GameObject PlayerPrefab;
+    public Dictionary<string, PlayerData> PlayerData = new();
+    public GameObject NetworkPlayerPrefab;
+    public GameObject LocalPlayerPrefab;
 
-    public GameObject LoadingScreen;
-    public TMP_Text LoadingText;
+    public string LocalPlayerSteamId = "SteamId1234";
+    public string LocalPlayerSteamName = "SteamName";
 
     private void Awake() {
         Instance = this;
@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour {
     private void Start() {
         if (SteamManager.Initialized) {
             m_GameOverlayActivated = Callback<GameOverlayActivated_t>.Create(OnGameOverlayActivated);
-            //_localPlayerData.steamName = SteamFriends.GetPersonaName();
-            //_localPlayerData.steamID = SteamUser.GetSteamID().ToString();
+            //_localPlayerSteamName = SteamFriends.GetPersonaName();
+            //_localPlayerSteamId = SteamUser.GetSteamID().ToString();
         }
     }
 
@@ -59,29 +59,4 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-
-    public void ShowLoadingScreen(bool bActive)
-    {
-        LoadingScreen.SetActive(bActive);
-    }
-
-    public void SpawnPlayer(string steamId,string steamName, int teamId, Vector3 spawnPos, Quaternion spawnRot)
-    {
-        var player = Instantiate(PlayerPrefab, spawnPos, spawnRot);
-        player.name = steamId;
-        var playerData = player.GetComponent<Player>();
-        playerData.teamId = teamId;
-        playerData.steamId = steamId;
-        playerData.steamName = steamName;
-        
-        Players.Add(player);
-
-        //TODO: Disable control over other players that arent your own
-
-    }
-
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        GameServerSend.SendSceneLoaded();
-        LoadingText.text = "Waiting on other players...";
-    }
 }

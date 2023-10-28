@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.rlabrecque.steamworks.net.editor", "com.rlabrecque.steamworks.net.editor.csproj", "{6031D2EB-D533-4108-B6C8-145634600D0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{017078CC-355C-3E0B-D3E3-02CAFF25CB2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{6031D2EB-D533-4108-B6C8-145634600D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6031D2EB-D533-4108-B6C8-145634600D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6031D2EB-D533-4108-B6C8-145634600D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017078CC-355C-3E0B-D3E3-02CAFF25CB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017078CC-355C-3E0B-D3E3-02CAFF25CB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017078CC-355C-3E0B-D3E3-02CAFF25CB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017078CC-355C-3E0B-D3E3-02CAFF25CB2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

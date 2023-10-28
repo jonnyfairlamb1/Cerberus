@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NovaCore;
 using Packets;
 using System.Linq;
 using Assets.Scripts.Network.GameServer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor.SearchService;
+using Steamworks;
 
 namespace Assets.Scripts.Network {
 
@@ -16,41 +17,87 @@ namespace Assets.Scripts.Network {
         {
             ushort playerId = message.GetUShort();
             GameState gameState = (GameState)message.GetInt();
-            int timerRemaining = message.GetInt();
+            float timerRemaining = message.GetFloat();
+            GameServerSend.SendLogin(GameManager.Instance.LocalPlayerSteamId, GameManager.Instance.LocalPlayerSteamName);
 
-            GameServerSend.SendLogin("SteamId", "SteamName");
 
-            if (gameState == GameState.PrepPhase || gameState == GameState.RoundStarted)
-            {
-                //go to map name given
-            }
-            else
+            if (gameState == GameState.PreLobby || gameState == GameState.Lobby)
             {
                 //go to lobby
                 GameLobbyUIController.Instance.SetupLobby(gameState, timerRemaining);
             }
+
         }
 
         [MessageHandler((ushort)GameServerPackets.GS_PlayerJoinedLobby)]
         private static void Packet_PlayerJoinedLobby(Message message)
         {
             int numberOfPlayers = message.GetInt();
-            List<string> playerNames = new();
+
+            //We get all the data back for all the players that are here.
+            GameManager.Instance.PlayerData.Clear();
+            for (int i = 0; i < numberOfPlayers; i++) {
+                var playerName = message.GetString();
+                var playerId = message.GetString();
+
+                GameManager.Instance.PlayerData.Add(playerId, new() {
+                    SteamName = playerName,
+                    SteamId = playerId
+                });
+            }
+
+            GameLobbyUIController.Instance.UpdateLobbyScreen();
+        }
+
+        /// <summary>
+        /// Network player joined the game.
+        /// </summary>
+        /// <param name="message"></param>
+        [MessageHandler((ushort)GameServerPackets.GS_ForeignPlayerJoinedGame)]
+        private static void Packet_ForeignPlayerJoinedGame(Message message)
+        {
+            string steamName = message.GetString();
+            string steamId = message.GetString();
+            int teamId = message.GetInt();
+
+            Vector3 currentPosition = new(message.GetFloat(), message.GetFloat(), message.GetFloat());
+            Quaternion currentRotation = new(message.GetFloat(), message.GetFloat(), message.GetFloat(), message.GetFloat());
+
+            InGameManager.Instance.SpawnPlayer(steamId, steamName, teamId, currentPosition, currentRotation);
+        }
+
+        /// <summary>
+        /// Local player joined the game so will receive more data.
+        /// </summary>
+        /// <param name="message"></param>
+        [MessageHandler((ushort)GameServerPackets.GS_LocalPlayerJoinedGame)]
+        private static void Packet_LocalPlayerJoinedGame(Message message)
+        {
+            var numberOfPlayers = message.GetInt();
 
             for (int i = 0; i < numberOfPlayers; i++)
             {
-                playerNames.Add(message.GetString());
-            }
+                var steamName = message.GetString();
+                var steamId = message.GetString();
+                var teamId = message.GetInt();
 
-            GameLobbyUIController.Instance.AddPlayerName(playerNames);
+                Vector3 currentPosition = new(message.GetFloat(), message.GetFloat(), message.GetFloat());
+                Quaternion currentRotation = new(message.GetFloat(), message.GetFloat(), message.GetFloat(), message.GetFloat());
+
+                InGameManager.Instance.SpawnPlayer(steamId, steamName, teamId, currentPosition, currentRotation);
+            }
         }
 
         [MessageHandler((ushort)GameServerPackets.GS_GameStarted)]
         private static void Packet_GameStarted(Message message) {
             string mapName = message.GetString();
+            string currentScene = SceneManager.GetActiveScene().name;
 
-            GameManager.Instance.ShowLoadingScreen(true);
-            SceneManager.sceneLoaded += GameManager.Instance.OnSceneLoaded;
+            if (currentScene == mapName)
+                return;
+
+            GameLobbyUIController.Instance.ShowLoadingScreen(true);
+            SceneManager.sceneLoaded += GameLobbyUIController.Instance.OnSceneLoaded;
 
             SceneManager.LoadSceneAsync(mapName, LoadSceneMode.Additive);
         }
@@ -68,10 +115,39 @@ namespace Assets.Scripts.Network {
                 Vector3 spawnPosition = new(message.GetFloat(), message.GetFloat(), message.GetFloat());
                 Quaternion spawnRotation = new(message.GetFloat(), message.GetFloat(), message.GetFloat(), message.GetFloat());
 
-                GameManager.Instance.SpawnPlayer(steamId, steamName, teamId, spawnPosition, spawnRotation);
+                InGameManager.Instance.SpawnPlayer(steamId, steamName, teamId, spawnPosition, spawnRotation);
             }
 
-            GameManager.Instance.ShowLoadingScreen(false);
+            GameLobbyUIController.Instance.ShowLoadingScreen(false);
+        }
+
+        [MessageHandler((ushort)GameServerPackets.GS_PlayerTransformUpdate)]
+        private static void Packet_PlayerTransform(Message message) {
+
+            Debug.Log("Received transform update");
+            int numberOfPlayers = message.GetInt();
+
+            try
+            {
+                for (int i = 0; i < numberOfPlayers; i++) {
+                    string steamId = message.GetString();
+
+                    Vector3 currentPosition = new(message.GetFloat(), message.GetFloat(), message.GetFloat());
+                    Quaternion currentRotation = new(message.GetFloat(), message.GetFloat(), message.GetFloat(), message.GetFloat());
+
+                    if (steamId == GameManager.Instance.LocalPlayerSteamId) //cant check before reading position data or steamId value gets corrupted.
+                        continue;
+
+
+                    InGameManager.Instance.Players[steamId].transform.position = currentPosition;
+                    InGameManager.Instance.Players[steamId].transform.rotation = currentRotation;
+                }
+            }
+            catch (Exception e)
+            {
+                //Player hasnt loaded in yet
+            }
+            
         }
     }
 }

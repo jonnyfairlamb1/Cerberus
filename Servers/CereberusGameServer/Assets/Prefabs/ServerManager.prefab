@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835487076731681041}
   - component: {fileID: 7353950991368951910}
+  - component: {fileID: 9162408047777126697}
   m_Layer: 0
   m_Name: ServerManager
   m_TagString: Untagged
@@ -46,4 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   port: 5101
   maxClientCount: 12
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 6199272309896611748, guid: 0de62275151acfe4aa9aad9ce48d5ccd, type: 3}
+--- !u!114 &9162408047777126697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412551090170770534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c04ec8caa2732844824d0f278487e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerCountdownValueSeconds: 60

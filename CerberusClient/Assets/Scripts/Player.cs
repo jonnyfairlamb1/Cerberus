@@ -1,11 +1,15 @@
+using System;
+using System.Timers;
+using Assets.Scripts.Network.GameServer;
+using NovaCore.Utils;
 using TMPro;
 using UnityEngine;
+using LogType = NovaCore.Utils.LogType;
 
 public class Player : MonoBehaviour {
-    public string steamName;
-    public string steamId;
-    public int playerId;
-    public int teamId;
+
+    [SerializeField] private float _transformUpdateTimer = 1000f;
+    private float _transformTimer;
 
     public GameObject _characterHead;
     public GameObject _characterHeadPrefab;
@@ -17,9 +21,23 @@ public class Player : MonoBehaviour {
 
     private bool isDead = false;
 
-    public void UpdateTextFields(TMP_Text[] textfields) {
-        for (int i = 0; i < textfields.Length; i++) {
-            if (textfields[i].name == "PlayerNameLabelTxt") textfields[i].text = steamName;
+    public bool IsLocalControlled = false;
+    public PlayerData PlayerData;
+
+    void Start()
+    {
+        _transformTimer = _transformUpdateTimer;
+    }
+
+    void FixedUpdate()
+    {
+        GameServerSend.SendPlayerMove(this.gameObject);
+
+        if (_transformTimer >= 0 && IsLocalControlled)
+        {
+            _transformTimer -= Time.deltaTime;
+            
+            _transformTimer = _transformUpdateTimer;
         }
     }
 
@@ -38,7 +56,7 @@ public class Player : MonoBehaviour {
 
         //set rigidbody as active and give force
         var rb = _characterHeadPrefab.GetComponent<Rigidbody>();
-        ragdollController.EnableRagdoll(true);
-        rb.AddExplosionForce(power, _characterHeadPrefab.transform.position, 2f);
+        //ragdollController.EnableRagdoll(true);
+        //rb.AddExplosionForce(power, _characterHeadPrefab.transform.position, 2f);
     }
 }

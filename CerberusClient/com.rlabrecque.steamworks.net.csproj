@@ -133,8 +133,8 @@
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamClientPublic\HAuthTicket.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\autogen\isteammusic.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\Version.cs" />
-    <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamNetworkingTypes\SteamNetworkingIPAddr.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamTypes\DepotId_t.cs" />
+    <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamNetworkingTypes\SteamNetworkingIPAddr.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\autogen\SteamEnums.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamNetworkingTypes\SteamNetworkingErrMsg.cs" />
     <Compile Include="Assets\com.rlabrecque.steamworks.net\Runtime\types\SteamInput\InputDigitalActionHandle_t.cs" />
